@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css" />
+ <h1 id="title">Blank Slate</h1>
+ <p id="description">Thank you for being a test subject.</p>
+ <div>
+  <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+    <fieldset>
+    <label id="name-label">Name: <input type="text" id="name" placeholder="Enter your name: " required/></label>
+    <label id="email-label">Email: <input type="email" id="email" placeholder="Enter your email: " required/></label>
+    <label id="number-label">Age: <input type="number" id="number" min="1" max="99" placeholder="Enter your age: " required/></label>
+    </fieldset>
+    <fieldset>
+  <label for="dropdown">Which option best describes your current role: <select id="dropdown"></label>
+      <option value="">Select current role: </option>
+      <option value="1">Student</option>
+      <option value="2">Full time job</option>    
+      <option value="3">Full time learner</option>
+      <option value="4">Prefer not to say</option>
+      <option value="5">Other</option>
+    </select>
+    </fieldset>
+    <fieldset>
+  <label>Would you recommend freeCodeCamp to a friend?</label>
+      <input type="radio" name="recommend" value="1"/>Definitely
+      <input type="radio" name="recommend" value="2"/>Maybe
+      <input type="radio" name="recommend" value="3"/>No
+    </select>
+    </fieldset>
+    <fieldset>
+   <label>What is your favorite feature of freeCodeCamp?<select></label>
+    <option value="">Select an option</option>
+    <option value="1">Challenges</option>
+    <option value="2">Projects</option>
+    <option value="3">Community</option>
+    <option value="4">Open Source</option>  
+   </select>
+   </fieldset>
+   <fieldset>
+ <label>What would you like to see improved? (Check all that apply)</label>
+      <label><input value="1" type="checkbox"/>Front-End Projects</label>
+      <label><input value="2" type="checkbox"/>Back End Projects</label>
+      <label><input value="3" type="checkbox"/>Courses</label>
+      <label><input value="4" type="checkbox"/>Videos</label> 
+      </fieldset>
+      <fieldset>
+        <label for="comment">Any comments or suggestions?</label>
+    <textarea id="textarea" name="textarea" rows="3" cols="30" placeholder="No comments...."></textarea>
+      </fieldset>
+    <input type="submit" id="submit" value="Submit" />     
+  </form>
+  </div>
+</html> 

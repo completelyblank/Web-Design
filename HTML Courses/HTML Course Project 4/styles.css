@@ -1,0 +1,100 @@
+/* General styles */
+#header-img{
+  margin: 0;
+  padding: 0;
+   align-items: center;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+body {
+  font-family: Pathway-Gothic-One;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: silver;
+  text-align: center;
+}
+
+header {
+  background-color: black;
+  color: silver;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: silver;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: silver;
+  color: gold;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: black;
+  color: silver;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Fix the #navbar at the top of the viewport */
+#nav-bar {
+  background-color: black;
+  color: silver;
+  padding: 5px 10px;
+  position: fixed; /* Fixed position */
+  top: 0; /* Stick to the top of the viewport */
+  left: 0; /* Stick to the left edge of the viewport */
+  right: 0; /* Stick to the right edge of the viewport */
+}
+
+#nav-bar ul {
+  display: flex;
+}
+
+#nav-bar li {
+  margin-right: 20px;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: silver;
+}

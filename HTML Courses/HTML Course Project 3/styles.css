@@ -1,0 +1,106 @@
+/* Reset some default browser styles */
+body, h1, p, a, img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: silver;
+}
+h1{
+  font-family: Teko;
+  font-size: 50px;
+}
+header{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: silver;
+  font-family: Lora;
+  font-size: 35px;
+}
+
+/* Set some basic styles for the body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: silver;
+  background-color: black;
+  padding: 20px;
+}
+
+/* Style the main content container */
+#main-doc {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+/* Style the heading */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Style the paragraphs in the main-section div */
+.main-section p {
+  margin-bottom: 10px;
+}
+
+/* Style the code blocks */
+code {
+  display: block;
+  background-color:;
+  padding: 10px;
+  overflow-x: auto;
+  color:silver;
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#navbar a {
+  color: silver;
+  text-decoration: none;
+  font-size:10px;
+}
+
+/* Add underline effect on hover */
+#navbar a:hover {
+  text-decoration: underline;
+}
+/* Media Query for Mobile-friendly Navigation */
+@media (max-width: 768px) {
+  #navbar ul {
+    display: none;
+  }
+
+  #navbar.active ul {
+    display: block;
+  }
+
+  #navbar header {
+    cursor: pointer;
+  }
+}
+
+/* Style the navigation menu */
+#navbar {
+  background-color: black;
+  color: silver;
+  text-align:center;
+  padding: 0px 0px; /* Reduced padding */
+  position: fixed; /* Fixed position */
+  left: 0; /* Stick to the left edge of the window */
+  top: 0; /* Stick to the top of the window */
+  bottom: 0; /* Take the full height of the window */
+  width: 100px; /* Set a fixed width for the navbar */
+  height:50px;
+  font-size:10px
+}

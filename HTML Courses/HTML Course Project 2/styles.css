@@ -1,0 +1,73 @@
+/* Reset some default browser styles */
+body, h1, a, img {
+  margin: 10;
+  padding: 10;
+  box-sizing: border-box;
+  font-family:Courier-New;
+  color: #FDDC5C;
+}
+
+/* Set some basic styles for the body */
+body {
+  font-family: Monaco, sans-serif;
+  line-height: 1.6;
+  color: #B59410;
+  background-color: #2d2d2d;
+  padding: 20px;
+}
+
+/* Style the main content container */
+#main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the image container */
+#img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Style the image */
+#image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Style the image caption */
+#img-caption {
+  font-style: italic;
+  text-align: center;
+  color: #777;
+}
+
+/* Style the heading */
+h1 {
+  text-align: center;
+  margin: 0px 0;
+}
+
+/* Style the paragraphs in the tribute-info div */
+#tribute-info p {
+  margin-bottom: 10px;
+}
+
+/* Style the tribute link */
+#tribute-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: gold;
+  text-decoration: none;
+}
+
+#tribute-link:hover {
+  text-decoration: underline;
+}
+p{
+  text-align: center;
+}
