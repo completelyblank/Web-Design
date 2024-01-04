@@ -1,4 +1,7 @@
-# Web Design Projects
+![image](https://github.com/completelyblank/Web-Design/assets/105001837/48236985-f71f-4f88-9a82-25f22cb24734)
+
+
+# Static Web Design Projects
 
 Welcome to the Web Design Projects repository! Here you'll find a collection of small yet intricate projects developed using HTML5, CSS, and JavaScript to explore various concepts and create engaging web experiences.
 
