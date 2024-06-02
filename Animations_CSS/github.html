@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github Front Page</title>
+  <style>
+    body {
+      background-color: black;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .laptop-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      color: #0f0;
+      font-size: 1.2em;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      border: 1px solid #0f0;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .laptop {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background-color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin: 0 auto;
+    }
+
+    .screen {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      background-color: black;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+
+    .neon-text-container {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      text-align: center;
+    }
+
+    .neon-text {
+      display: block;
+      margin: 10px 0;
+      color: #0f0;
+      text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
+      opacity: 0;
+      animation: neon-effect 1s forwards, move-text 10s linear infinite;
+    }
+
+    @keyframes neon-effect {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes move-text {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(10px, -10px); }
+    }
+
+    :root {
+      --background: #000000;
+      --base: #d1d2d4;
+      --screen: #000000;
+      --frame: #3f3f41;
+      --open: #bcbdc1;
+      --base2: #d1d2d4;
+    }
+
+    .container {
+      width: 70%;
+      margin: 0 auto;
+      padding: 2em;
+    }
+
+    .laptop {
+      position: relative;
+      width: 550px;
+      height: 340px;
+      margin: 0 auto;
+      background: var(--screen);
+      border: 15px solid var(--frame);
+      border-top: 20px solid var(--frame);
+      border-radius: 14px 14px 0 0;
+      box-shadow: 0 0 0 1px var(--base2);
+    }
+
+    .laptop::before {
+      content: '';
+      bottom: -35px;
+      background: var(--base);
+      height: 20px;
+      width: 700px;
+      border-radius: 0 0 10px 10px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .laptop::after {
+      content: '';
+      top: -12px;
+      width: 3px;
+      height: 3px;
+      background: var(--base);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .base {
+      position: absolute;
+      bottom: -25px;
+      background: var(--base2);
+      height: 10px;
+      width: 700px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .base::before {
+      content: '';
+      border-radius: 0 0 10px 10px;
+      height: 10px;
+      width: 80px;
+      background: var(--open);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .base::after {
+      content:'';
+      position: absolute;
+      height: 20px;
+      width: 700px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0px 10px 36px -2px rgba(0,0,0,0.4);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="laptop">
+      <div class="screen">
+        <pre id="code"></pre>
+      </div>
+      <div class="base"></div>
+    </div>
+  </div>
+  
+  <div class="neon-text-container">
+    <span class="neon-text" id="neon-text"></span>
+  </div>
+  
+  <script>
+    const texts = [
+      "Muhammad Raza",
+      "Completely Blank",
+      "Sophomore at Fast University",
+      "ML",
+      "Cyber Security",
+      "Web Dev",
+      "Data Handling",
+      "Thank you!"
+    ];
+
+    const neonTextElement = document.getElementById("neon-text");
+    let currentIndex = 0;
+
+    function typeWriter() {
+      const currentText = texts[currentIndex];
+      let index = 0;
+
+      function typeWriterInner() {
+        if (index < currentText.length) {
+          neonTextElement.innerHTML += currentText.charAt(index);
+          index++;
+          setTimeout(typeWriterInner, 50);
+        } else {
+          currentIndex++;
+          if (currentIndex < texts.length) {
+            setTimeout(() => {
+              neonTextElement.innerHTML = "";
+              typeWriter();
+            }, 2000); // wait 2 seconds before typing the next text
+          } else {
+            // Loop back to the first text
+            currentIndex = 0;
+            setTimeout(() => {
+              neonTextElement.innerHTML = "";
+              typeWriter();
+            }, 2000);
+          }
+        }
+      }
+
+      typeWriterInner();
+    }
+
+    typeWriter();
+  </script>
+</body>
+</html>
